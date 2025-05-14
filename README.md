@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Банк Защита - Система анализа киберугроз
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Фронтенд-приложение для анализа киберугроз и кибератак в банковской информационной инфраструктуре с ИИ-ассистентом.
 
-## Available Scripts
+## Особенности
 
-In the project directory, you can run:
+- **Анализ киберугроз и уязвимостей** - обнаружение, оценка и мониторинг потенциальных угроз для банковской системы
+- **ИИ-ассистент** - интеллектуальный помощник для анализа безопасности и рекомендаций
+- **Дашборд безопасности** - визуализация ключевых показателей безопасности в реальном времени
+- **Управление доступом** - разграничение доступа по департаментам и ролям пользователей
+- **Технический мониторинг** - отслеживание работоспособности и безопасности систем
 
-### `npm start`
+## Технический стек
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18
+- React Router 6
+- Axios для API-запросов
+- Recharts для визуализации данных
+- SCSS для стилизации с модульным подходом
+- JWT для аутентификации
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Требования
 
-### `npm test`
+- Node.js 16+
+- npm 7+ или yarn 1.22+
+- Подключение к бэкенду Django
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка
 
-### `npm run build`
+```bash
+# Клонирование репозитория
+git clone https://github.com/your-org/bank-security-frontend.git
+cd bank-security-frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Установка зависимостей
+npm install
+# или
+yarn install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Создание .env файла
+cp .env.example .env
+# Отредактируйте .env файл, указав URL вашего API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Запуск в режиме разработки
+npm start
+# или
+yarn start
+```
 
-### `npm run eject`
+## Структура проекта
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+bank-security-frontend/
+├── public/              # Статические файлы
+├── src/
+│   ├── api/             # API взаимодействие с бэкендом
+│   ├── assets/          # Изображения, стили и другие ресурсы
+│   ├── components/      # Многоразовые компоненты
+│   ├── contexts/        # React контексты
+│   ├── hooks/           # Пользовательские хуки
+│   ├── pages/           # Компоненты страниц
+│   ├── utils/           # Вспомогательные функции
+│   ├── App.jsx          # Основной компонент приложения
+│   └── index.js         # Точка входа
+└── package.json         # Зависимости и скрипты
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Функциональность
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Аутентификация и авторизация
+- Регистрация и авторизация пользователей
+- Управление токенами JWT
+- Разграничение доступа по ролям и департаментам
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Дашборд
+- Сводка по безопасности
+- Индикаторы уровня угроз
+- Статистика инцидентов и атак
+- Мониторинг в реальном времени
 
-## Learn More
+### Анализ угроз
+- Выявление потенциальных угроз
+- Классификация по уровню опасности
+- Подробная информация о каждой угрозе
+- Рекомендации по устранению
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ИИ-ассистент
+- Интеллектуальный анализ данных
+- Ответы на вопросы по безопасности
+- Рекомендации по улучшению защиты
+- Анализ загруженных файлов на предмет угроз
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Отчеты и аналитика
+- Формирование отчетов о безопасности
+- Визуализация данных с помощью графиков и диаграмм
+- Экспорт отчетов в различных форматах
 
-### Code Splitting
+## Связь с бэкендом
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Приложение взаимодействует с Django бэкендом через REST API. Необходимо настроить URL бэкенда в файле `.env`:
 
-### Analyzing the Bundle Size
+```
+REACT_APP_API_URL=http://localhost:8000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Тема оформления
 
-### Making a Progressive Web App
+Приложение поддерживает светлую и темную темы оформления. Тема автоматически определяется на основе системных настроек или может быть изменена пользователем.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Лицензия
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 Банк Защита. Все права защищены.
